@@ -15,8 +15,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB_URI);
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workoutTrackerDB";
+mongoose.connect(MONGODB_URI), {useNewUrlParser: true };
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);

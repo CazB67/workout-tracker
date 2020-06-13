@@ -16,7 +16,7 @@ A workout tracker application where users can view, create and track daily worko
 ## Installation
 
 ## Usage
-* The URL of the deployed application is 
+* The URL of the deployed application is https://mysterious-depths-82586.herokuapp.com/
 
 * The URL of the GitHub repository is https://github.com/CazB67/workout-tracker
 
