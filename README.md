@@ -15,6 +15,10 @@ A workout tracker application where users can view, create and track daily worko
 
 ## Installation
 
+Run `npm install` in node
+Run `npm start`
+Navigate to `localhost:3000` in the browser
+
 ## Usage
 * The URL of the deployed application is https://mysterious-depths-82586.herokuapp.com/
 
