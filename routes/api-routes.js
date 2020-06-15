@@ -1,10 +1,11 @@
 module.exports = function(app) {
-    const db = require("./models");
+    const db = require("../models");
 
     app.get("/api/workouts", (req, res) => {
-        db.Note.find({})
-          .then(dbNote => {
-            res.json(dbNote);
+        console.log("hi");
+        db.Workout.find({})
+          .then(dbWorkout => {
+            res.json(dbWorkout);
           })
           .catch(err => {
             res.json(err);
