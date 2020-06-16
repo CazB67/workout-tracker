@@ -15,9 +15,14 @@ A workout tracker application where users can view, create and track daily worko
 
 ## Installation
 
-Run `npm install` in node
+Run  `MongoDB` is running
+
+Run `npm install` in terminal
+
 Run `npm start`
+
 Navigate to `localhost:3000` in the browser
+
 
 ## Usage
 * The URL of the deployed application is https://mysterious-depths-82586.herokuapp.com/
@@ -26,7 +31,7 @@ Navigate to `localhost:3000` in the browser
 
 The following GIF shows the application's functionality and how to use. 
 
-<img src="" width="" height="" title="Workout Tracker App">
+<img src="./public/exercise.gif" width="" height="" title="Workout Tracker App">
 
 ## Credits
 - Team at UWA Coding Bootcamp

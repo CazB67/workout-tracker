@@ -17,15 +17,11 @@ module.exports = function(app) {
         console.log(req.body + " ID " + req.params.id);   
         db.Workout.findOneAndUpdate({_id: req.params.id},{$push: {exercises: req.body} }, { new: true})
           .then(dbWorkout => {
+           //Going through the workout and finding the duration of each exercise and adding together to get total duration(td)
            let td =0;
-            console.log(dbWorkout.exercises[0].duration);
-            for(let i=0; i<dbWorkout.exercises.length; i++){
-              td = td + dbWorkout.exercises[i].duration 
-              console.log("dddddddddd" + td);
-            }
+           dbWorkout.exercises.forEach(exercise => td+= exercise.duration)
             db.Workout.findOneAndUpdate({_id: req.params.id},{$set: {totalDuration:td} }, { new: true})
             .then(dbWorkout => {
-              console.log(dbWorkout + "lkjhgf");
             res.json(dbWorkout);
             })
           })
@@ -44,7 +40,8 @@ module.exports = function(app) {
             res.json(err);
           });
       });  
-
+      
+      //Gets workout data
       app.get("/api/workouts/range", (req, res) => {
         db.Workout.find({})
           .then(dbWorkout => {
@@ -53,6 +50,5 @@ module.exports = function(app) {
           .catch(err => {
             res.json(err);
           });
-      }); 
-       
+      });       
 };
