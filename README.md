@@ -15,7 +15,7 @@ A workout tracker application where users can view, create and track daily worko
 
 ## Installation
 
-Run  `MongoDB` is running
+Run  `MongoDB`
 
 Run `npm install` in terminal
 
